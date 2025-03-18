@@ -1,0 +1,84 @@
+boby{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    grid-template-rows: auto repeat(3, 100px 300px);
+    grid-template-areas:
+    "header header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main";
+    gap: 2rem;
+}
+
+header {
+    grid-area: header;
+    grid-column: 1 / span 5;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    align-items: center;
+
+}
+
+.item2 {
+    justify-self: center;
+}
+
+.item3 {
+    justify-self: end;
+    align-self: center;
+}
+
+#fotoPerfil {
+    border-radius: 30px;
+    width: 50px;
+}
+
+main {
+    grid-area: main;
+    grid-column: 2 / span 4;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    gap: 20px;
+}
+
+.video {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "tela tela"
+    "perfil titulo"
+    ". info";
+}
+
+.tela {
+    grid-area: tela;
+}
+
+.perfil {
+    grid-area: perfil;
+}
+
+.titulo {
+    grid-area: titulo;
+    font-size: smaller;
+    font-weight: bolder;
+    padding-top: 0.5rem;
+}
+
+.info {
+    grid-area: info;
+    font-size: smaller;
+    color: darkgrey;
+}
+
+aside {
+    grid-area: sidebar;
+    justify-items: start;
+}
+
+img {
+    vertical-align: middle;
+}
