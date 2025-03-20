@@ -76,7 +76,18 @@ main {
 
 aside {
     grid-area: sidebar;
-    justify-items: start;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem
+}
+
+li a {
+    text-decoration: none;
+    color: black;
 }
 
 img {
